@@ -17,3 +17,6 @@ This project is a simple shopping cart application built using React and the `us
 - **React Router**: For routing between different views in the application.
 - **useReducer**: For state management within the app.
 - **JSON**: Used for mock product data.
+
+
+
