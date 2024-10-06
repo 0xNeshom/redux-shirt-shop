@@ -3,7 +3,7 @@ import Rating from './Ratings';
 
 const Filters = () => {
   const [rate, setRate] = useState(3);
-  const [category,setCategory] = useState
+  const [category,setCategory] = useState();
 
   return (
     <div className="w-[400px] mr-32">
