@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useReducer } from 'react';
-import product from '../Services/ProductData.json'; // Import your JSON data
+import product from '../Services/ProductData.json'; 
 import { cardReducer } from '../Reducer';
 
 const Card = createContext();

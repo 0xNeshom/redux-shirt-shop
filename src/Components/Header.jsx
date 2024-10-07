@@ -13,7 +13,6 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { useCardContext } from '../Context/Context';
 import { AiFillDelete } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-import ShoppingCard from './ShoppingCard';
 export default function Header() {
   const {
     state: { card },

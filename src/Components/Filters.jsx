@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import Rating from './Ratings';
-
+import useCardContext from '../Context/Context';
 const Filters = () => {
+  // const {
+  //   state: { product },
+  //   dispatch,
+  // } = useCardContext();
   const [rate, setRate] = useState(3);
-  const [category,setCategory] = useState();
+  // const [category, setCategory] = useState("all");
 
   return (
-    <div className="w-[400px] mr-32">
+    <div className='w-[400px] mr-32'>
       <div className='fixed z-50'>
         <div className='bg-[#1E1E1E] my-3 w-[400px] text-[#E0E0E0] min-h-screen  sticky  top-0'>
           <div className='flex flex-col p-3 mx-4 gap-5'>
