@@ -8,11 +8,12 @@ const SingleProduct = ({ product }) => {
     state: { card },
     dispatch,
   } = useCardContext();
+  
 
   const isInCard = card.some((p) => p.id === product.id);
 
   return (
-    <div className="mr-5">
+    <div className="">
       <Card className="flex flex-col" >
         <Card.Img variant="top" src={product.image} alt={product.title} style={{height:'300px'}} />
         <Card.Body className='flex flex-col gap-2'>
@@ -27,7 +28,7 @@ const SingleProduct = ({ product }) => {
             {isInCard ? 
               <button
   
-                className='bg-red-600 py-2 p-7 rounded-sm text-center text-[#E0E0E0]'
+                className='bg-red-600 py-2 p-6 rounded-md text-center text-[#E0E0E0]'
                 onClick={() => 
                   dispatch({
                     type: 'removeTheCard',
@@ -40,8 +41,8 @@ const SingleProduct = ({ product }) => {
                 </button>
              : 
               <button
-             className= {`py-2 px-10 rounded-sm text-center text-[#E0E0E0] 
-                ${product.inStock ? "bg-[#009688]" : "bg-gray-500 cursor-not-allowed py-2 px-3"}`}
+             className= {`py-2 px-10 rounded-md text-center text-black 
+                ${product.inStock ? "bg-[#F7C566]" : "bg-gray-500 cursor-not-allowed py-2 px-3"}`}
                 onClick={() => 
                   dispatch({
                     type: 'addTheCard',
