@@ -4,6 +4,7 @@ import Home from './Components/Home';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Context from './Context/Context';
 import ShoppingCard from './Components/ShoppingCard';
+import './App.css'
 
 function App() {
   return (

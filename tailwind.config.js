@@ -4,8 +4,11 @@ module.exports = {
     "./src/**/*.{js,jsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        'custom': '0 80% 80% rgba(0, 0, 0, 0.9)', // Custom shadow with percentage
+      },
+    },
   },
   plugins: [],
 }
-

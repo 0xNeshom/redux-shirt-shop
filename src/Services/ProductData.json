@@ -2,19 +2,19 @@
     {
         "id": 1,
         "category": "tShirt",
-        "title": "Light Gray T-Shirt",
-        "image": "https://i.postimg.cc/B6CtkhHg/t-shirt-1.png",
-        "price": 7.5,
-        "score": 3.8,
+        "title": "White T-Shirt",
+        "image": "https://i.postimg.cc/c4P0J6My/717780c71461755a12e4f55a0c2b86cc6dc911b3-1636616636.jpg",
+        "price": 187.23,
+        "score": 5,
         "fastDelivery": true,
         "inStock": true
     },
     {
         "id": 2,
         "category": "tShirt",
-        "title": "Green T-Shirt",
-        "image": "https://i.postimg.cc/8ktjb01k/t-shirt-2.png",
-        "price": 6.5,
+        "title": "M90 T-Shirt",
+        "image": "https://dkstatics-public.digikala.com/digikala-products/96e590e5902a352c753a20e390fb04c5249285a0_1720930028.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90",
+        "price": 452.78,
         "score": 4,
         "fastDelivery": false,
         "inStock": true
@@ -22,9 +22,9 @@
     {
         "id": 3,
         "category": "tShirt",
-        "title": "Black T-Shirt",
-        "image": "https://i.postimg.cc/SKFss0Gd/t-shirt-3.png",
-        "price": 9.2,
+        "title": "Green T-Shirt",
+        "image": "https://i.postimg.cc/qRQpBLQj/4aaad88b3280c8ebfb91d4bb2e56c28c2e7216ec-1683963499.jpg",
+        "price": 245.56,
         "score": 3.6,
         "fastDelivery": true,
         "inStock": false
@@ -32,9 +32,9 @@
     {
         "id": 4,
         "category": "tShirt",
-        "title": "Yellow T-Shirt",
-        "image": "https://i.postimg.cc/TwT3VrFW/t-shirt-4.png",
-        "price": 7,
+        "title": "Black T-Shirt",
+        "image": "https://i.postimg.cc/C1r966cT/fd97a11e004a6efb7e7b7a78b187f4691c087b10-1636617534.jpg",
+        "price": 319.14,
         "score": 3.3,
         "fastDelivery": false,
         "inStock": true
@@ -42,9 +42,9 @@
     {
         "id": 5,
         "category": "tShirt",
-        "title": "Light Blue T-Shirt",
+        "title": "Light Blue ",
         "image": "https://i.postimg.cc/jjtbmRXp/t-shirt-5.png",
-        "price": 8.45,
+        "price": 148.93,
         "score": 3.9,
         "fastDelivery": true,
         "inStock": true
@@ -54,7 +54,7 @@
         "category": "tShirt",
         "title": "Gray T-Shirt",
         "image": "https://i.postimg.cc/HnqG2mnP/t-shirt-6.png",
-        "price": 8.8,
+        "price": 120.84,
         "score": 4.2,
         "fastDelivery": true,
         "inStock": false
@@ -62,9 +62,9 @@
     {
         "id": 7,
         "category": "poloShirt",
-        "title": "Black Polo Shirt",
+        "title": "Black Polo ",
         "image": "https://i.postimg.cc/QdkLpR30/polo-shirt-1.png",
-        "price": 7.63,
+        "price": 175.63,
         "score": 4,
         "fastDelivery": false,
         "inStock": true
@@ -72,9 +72,9 @@
     {
         "id": 8,
         "category": "poloShirt",
-        "title": "Orange Polo Shirt",
+        "title": "Orange Polo ",
         "image": "https://i.postimg.cc/j2JmC1c6/polo-shirt-2.png",
-        "price": 11.7,
+        "price": 214.70,
         "score": 4.8,
         "fastDelivery": true,
         "inStock": true
@@ -82,9 +82,9 @@
     {
         "id": 9,
         "category": "poloShirt",
-        "title": "Dark Gray Polo Shirt",
+        "title": "Dark Gray Polo ",
         "image": "https://i.postimg.cc/0NX9wLYh/polo-shirt-3.png",
-        "price": 6.95,
+        "price": 144.99,
         "score": 4.5,
         "fastDelivery": true,
         "inStock": false
@@ -92,9 +92,9 @@
     {
         "id": 10,
         "category": "poloShirt",
-        "title": "Light Green Polo Shirt",
+        "title": "Light Green Polo ",
         "image": "https://i.postimg.cc/YCbH5Jsj/polo-shirt-4.png",
-        "price": 8.15,
+        "price": 158.25,
         "score": 3.7,
         "fastDelivery": false,
         "inStock": true
@@ -102,9 +102,9 @@
     {
         "id": 11,
         "category": "poloShirt",
-        "title": "Dark Blue Polo Shirt",
+        "title": "Dark Blue Polo ",
         "image": "https://i.postimg.cc/d3pP8XVV/polo-shirt-5.png",
-        "price": 7.75,
+        "price": 102.35,
         "score": 3.9,
         "fastDelivery": false,
         "inStock": true
@@ -114,7 +114,7 @@
         "category": "hoodie",
         "title": "Black Hoodie",
         "image": "https://i.postimg.cc/HxNV4Jg0/hoodie-1.png",
-        "price": 10.35,
+        "price": 129.99,
         "score": 4.3,
         "fastDelivery": true,
         "inStock": true
@@ -124,7 +124,7 @@
         "category": "hoodie",
         "title": "Orange Hoodie",
         "image": "https://i.postimg.cc/cJp52h0r/hoodie-2.png",
-        "price": 12,
+        "price": 165.00,
         "score": 3.9,
         "fastDelivery": false,
         "inStock": false
@@ -134,7 +134,7 @@
         "category": "hoodie",
         "title": "Gray Hoodie",
         "image": "https://i.postimg.cc/PqQwnrkY/hoodie-3.png",
-        "price": 11.74,
+        "price": 142.67,
         "score": 4.1,
         "fastDelivery": true,
         "inStock": true
@@ -144,7 +144,7 @@
         "category": "hoodie",
         "title": "Pink Hoodie",
         "image": "https://i.postimg.cc/MTZSxVLq/hoodie-4.png",
-        "price": 14.25,
+        "price": 178.88,
         "score": 4.7,
         "fastDelivery": true,
         "inStock": false
@@ -152,9 +152,9 @@
     {
         "id": 16,
         "category": "sweatShirt",
-        "title": "Gray Sweat Shirt",
+        "title": "Gray Sweat",
         "image": "https://i.postimg.cc/JnBCBt4B/sweat-shirt-1.png",
-        "price": 13.38,
+        "price": 152.40,
         "score": 3.8,
         "fastDelivery": false,
         "inStock": true
@@ -162,9 +162,9 @@
     {
         "id": 17,
         "category": "sweatShirt",
-        "title": "Crimson Sweat Shirt",
+        "title": "Crimson Sweat ",
         "image": "https://i.postimg.cc/d32M4XCs/sweat-shirt-2.png",
-        "price": 15,
+        "price": 140.50,
         "score": 4.5,
         "fastDelivery": true,
         "inStock": true
@@ -172,9 +172,9 @@
     {
         "id": 18,
         "category": "sweatShirt",
-        "title": "White Sweat Shirt",
+        "title": "White Sweat ",
         "image": "https://i.postimg.cc/N05WWLXP/sweat-shirt-3.png",
-        "price": 10.9,
+        "price": 127.99,
         "score": 3.3,
         "fastDelivery": false,
         "inStock": true
@@ -182,9 +182,9 @@
     {
         "id": 19,
         "category": "sweatShirt",
-        "title": "Dark Gray Sweat ",
+        "title": "Dark Gray  ",
         "image": "https://i.postimg.cc/wvNnjP0X/sweat-shirt-4.png",
-        "price": 17.5,
+        "price": 189.25,
         "score": 4.9,
         "fastDelivery": true,
         "inStock": true
@@ -192,9 +192,9 @@
     {
         "id": 20,
         "category": "sweatShirt",
-        "title": "Beige Sweat Shirt",
+        "title": "Beige Sweat ",
         "image": "https://i.postimg.cc/sfptFkBy/sweat-shirt-5.png",
-        "price": 14.62,
+        "price": 114.88,
         "score": 4,
         "fastDelivery": false,
         "inStock": true

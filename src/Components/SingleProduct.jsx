@@ -1,63 +1,70 @@
 import React from "react";
-import { Card } from "react-bootstrap";
 import { useCardContext } from "../Context/Context";
-
 
 const SingleProduct = ({ product }) => {
   const {
     state: { card },
     dispatch,
   } = useCardContext();
-  
 
   const isInCard = card.some((p) => p.id === product.id);
 
   return (
-    <div className="">
-      <Card className="flex flex-col" >
-        <Card.Img variant="top" src={product.image} alt={product.title} style={{height:'300px'}} />
-        <Card.Body className='flex flex-col gap-2'>
-          <Card.Title>{product.title}</Card.Title>
-          <Card.Subtitle>
-            <span>${product.price}</span>
-          </Card.Subtitle>
-          <span>{product.fastDelivery?"Fast Delivery":"4 days delivery" }</span>
-          <span>Rate: {product.score}</span>
-
-          <div className="flex gap-1">
-            {isInCard ? 
+    <div className="mr-3 mb-3 bg-[#F5EFFF] rounded-lg shadow-sm text-black flex flex-col">
+      <div className="flex flex-col bg-[#F5EFFF] rounded-lg h-full">
+        <img
+          className="rounded-b-[25%] transform hover:scale-105 transition-transform duration-300 shadow-[0_5px_10px_rgba(0,0,0,0.22)] h-[200px] sm:h-[250px] md:h-[300px] w-full object-cover"
+          src={product.image}
+          alt={product.title}
+        />
+        <div className="flex flex-col p-4 text-black">
+          <div className="flex justify-between text-black">
+            <h2 className="text-base font-bold truncate">{product.title}</h2>
+            <h3 className="text-lg font-bold">
+              <span>${product.price}</span>
+            </h3>
+          </div>
+          <div className="flex flex-col justify-center items-center w-full gap-2">
+            <div className="text-base font-semibold flex justify-center items-center">
+              {product.fastDelivery ? "Fast Delivery" : "4 days delivery"}
+            </div>
+            <div className="text-base font-semibold">Rate: {product.score}</div>
+          </div>
+          <div className="flex gap-2 mt-4 justify-center">
+            {isInCard ? (
               <button
-  
-                className='bg-red-600 py-2 p-6 rounded-md text-center text-[#E0E0E0]'
-                onClick={() => 
+                className="bg-red-600 py-2 px-6 rounded-md text-white hover:translate-y-1 duration-300"
+                onClick={() =>
                   dispatch({
-                    type: 'removeTheCard',
+                    type: "removeTheCard",
                     payload: product,
                   })
                 }
-                disabled={!product.inStock}  
+                disabled={!product.inStock}
               >
                 Remove
-                </button>
-             : 
+              </button>
+            ) : (
               <button
-             className= {`py-2 px-10 rounded-md text-center text-black 
-                ${product.inStock ? "bg-[#F7C566]" : "bg-gray-500 cursor-not-allowed py-2 px-3"}`}
-                onClick={() => 
+                className={`py-2 px-10 rounded-md text-center text-black shadow-lg ${
+                  product.inStock
+                    ? "bg-white transform hover:top-1 hover:translate-y-1 duration-300 transition-transform"
+                    : "cursor-not-allowed bg-gray-300"
+                }`}
+                onClick={() =>
                   dispatch({
-                    type: 'addTheCard',
+                    type: "addTheCard",
                     payload: product,
                   })
                 }
-                disabled={!product.inStock}  
-            
+                disabled={!product.inStock}
               >
-                  {product.inStock?"Add" : "out of stock"}
-                </button>
-            }
+                {product.inStock ? "Add" : "Out of Stock"}
+              </button>
+            )}
           </div>
-        </Card.Body>
-      </Card>
+        </div>
+      </div>
     </div>
   );
 };

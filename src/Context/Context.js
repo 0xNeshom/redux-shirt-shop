@@ -14,7 +14,7 @@ const Context = ({ children }) => {
   const [descending, setDescending] = useState(false);
   const [inStockOnly, setInStockOnly] = useState(false);
   const [fastDeliveryOnly, setFastDeliveryOnly] = useState(false);
-  const [rate, setRate] = useState(3);
+  const [rate, setRate] = useState(1);
 
   return (
     <Card.Provider

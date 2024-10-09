@@ -25,9 +25,9 @@ const Filters = () => {
   };
 
   return (
-    <div className='w-[400px] mr-32'>
+    <div className='hidden lg:block w-[300px] mr-[70px]'> 
       <div className='fixed z-50'>
-        <div className='bg-black my-3 w-[400px] text-white min-h-screen sticky top-0'>
+        <div className='bg-[#2E073F] w-[300px] text-white min-h-screen sticky top-0'>
           <div className='flex flex-col p-3 mx-4 gap-5'>
             <h3 className='my-7 text-xl font-medium'>Filter Product</h3>
 
@@ -90,7 +90,7 @@ const Filters = () => {
           <div className='w-full flex justify-center'>
             <button
               onClick={clearFilters}
-              className='my-7 bg-[#F7C566] text-black rounded-md p-3 justify-center flex w-[250px]'
+              className='my-7 bg-[#EBD3F8] text-black rounded-md p-3 justify-center flex w-[250px]'
             >
               Clear Filters
             </button>
