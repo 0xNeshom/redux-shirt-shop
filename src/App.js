@@ -1,21 +1,22 @@
 import Header from './Components/Header';
 import Home from './Components/Home';
-
+import store from './Redux/store';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Context from './Context/Context';
+
 import ShoppingCard from './Components/ShoppingCard';
+import { Provider } from "react-redux";
 import './App.css'
 
 function App() {
   return (
-    <Context>
+    <Provider store={store}>
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/ShoppingCard' element={<ShoppingCard />} />
         <Route path='*' element={<Navigate to='/' />} />
       </Routes>
-    </Context>
+    </Provider>
   );
 }
 

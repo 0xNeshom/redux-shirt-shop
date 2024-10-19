@@ -9,30 +9,30 @@ const Context = ({ children }) => {
     product: product,
     card: [],
   });
-  const [category, setCategory] = useState('all');
-  const [ascending, setAscending] = useState(false);
-  const [descending, setDescending] = useState(false);
-  const [inStockOnly, setInStockOnly] = useState(false);
-  const [fastDeliveryOnly, setFastDeliveryOnly] = useState(false);
-  const [rate, setRate] = useState(1);
+  // const [category, setCategory] = useState('all');
+  // const [ascending, setAscending] = useState(false);
+  // const [descending, setDescending] = useState(false);
+  // const [inStockOnly, setInStockOnly] = useState(false);
+  // const [fastDeliveryOnly, setFastDeliveryOnly] = useState(false);
+  // const [rate, setRate] = useState(1);
 
   return (
     <Card.Provider
       value={{
         state,
         dispatch,
-        category,
-        setCategory,
-        ascending,
-        setAscending,
-        descending,
-        setDescending,
-        inStockOnly,
-        setInStockOnly,
-        fastDeliveryOnly,
-        setFastDeliveryOnly,
-        rate,
-        setRate
+        // category,
+        // setCategory,
+        // ascending,
+        // setAscending,
+        // descending,
+        // setDescending,
+        // inStockOnly,
+        // setInStockOnly,
+        // fastDeliveryOnly,
+        // setFastDeliveryOnly,
+        // rate,
+        // setRate
       }}
     >
       {children}

@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useCardContext } from '../Context/Context';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeCard } from '../Redux/actions';
 
 const ShoppingCard = () => {
-  const {
-    state: { card },
-    dispatch,
-  } = useCardContext();
+  const card = useSelector((state) => state.card);
+  const dispatch = useDispatch();
 
   const [total, setTotal] = useState(0);
 
@@ -15,10 +14,7 @@ const ShoppingCard = () => {
   }, [card]);
 
   const handleRemove = (product) => {
-    dispatch({
-      type: 'removeTheCard',
-      payload: product,
-    });
+    dispatch(removeCard(product.id));
   };
 
   return (
@@ -26,7 +22,7 @@ const ShoppingCard = () => {
       <h2 className='mb-6 text-3xl font-semibold text-[#7A1CAC] my-10'>Shopping Cart</h2>
       {card.length > 0 ? (
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
-          <div className=''>
+          <div>
             {card.map((product) => (
               <div
                 key={product.id}
@@ -51,12 +47,9 @@ const ShoppingCard = () => {
             ))}
           </div>
 
-       
           <div className='bg-[#EBD3F8] shadow-lg rounded-lg p-6 flex flex-col justify-between'>
             <div>
-              <h5 className='text-lg font-medium text-[#7A1CAC] mb-4'>
-                Order Summary
-              </h5>
+              <h5 className='text-lg font-medium text-[#7A1CAC] mb-4'>Order Summary</h5>
               <div className='flex justify-between mb-2'>
                 <span>Subtotal ({card.length} items)</span>
                 <span>${total.toFixed(2)}</span>
@@ -76,9 +69,7 @@ const ShoppingCard = () => {
         </div>
       ) : (
         <div className='bg-white shadow-md rounded-lg p-10 text-center'>
-          <h3 className='text-xl font-medium text-gray-700'>
-            Your cart is empty.
-          </h3>
+          <h3 className='text-xl font-medium text-gray-700'>Your cart is empty.</h3>
         </div>
       )}
     </div>

@@ -1,11 +1,10 @@
 import React from "react";
-import { useCardContext } from "../Context/Context";
+import { useSelector, useDispatch } from "react-redux";
+import { addCard, removeCard } from "../Redux/actions";
 
 const SingleProduct = ({ product }) => {
-  const {
-    state: { card },
-    dispatch,
-  } = useCardContext();
+  const card = useSelector((state) => state.card);
+  const dispatch = useDispatch();
 
   const isInCard = card.some((p) => p.id === product.id);
 
@@ -34,12 +33,7 @@ const SingleProduct = ({ product }) => {
             {isInCard ? (
               <button
                 className="bg-red-600 py-2 px-6 rounded-md text-white hover:translate-y-1 duration-300"
-                onClick={() =>
-                  dispatch({
-                    type: "removeTheCard",
-                    payload: product,
-                  })
-                }
+                onClick={() => dispatch(removeCard(product.id))}
                 disabled={!product.inStock}
               >
                 Remove
@@ -51,12 +45,7 @@ const SingleProduct = ({ product }) => {
                     ? "bg-white transform hover:top-1 hover:translate-y-1 duration-300 transition-transform"
                     : "cursor-not-allowed bg-gray-300"
                 }`}
-                onClick={() =>
-                  dispatch({
-                    type: "addTheCard",
-                    payload: product,
-                  })
-                }
+                onClick={() => dispatch(addCard(product))}
                 disabled={!product.inStock}
               >
                 {product.inStock ? "Add" : "Out of Stock"}

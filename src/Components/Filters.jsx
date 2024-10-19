@@ -1,27 +1,14 @@
 import React from 'react';
 import Rating from './Ratings';
-import { useCardContext } from '../Context/Context';
 
-const Filters = () => {
-  const {
-    rate,
-    setRate,
-    ascending,
-    setAscending,
-    descending,
-    setDescending,
-    inStockOnly,
-    setInStockOnly,
-    fastDeliveryOnly,
-    setFastDeliveryOnly,
-  } = useCardContext();
+const Filters = ({setInStockOnly,inStockOnly,fastDeliveryOnly,setFastDeliveryOnly,ascending,setAscending,descending,setDescending,rate,setRate}) => {
 
-  const clearFilters = () => {
-    setRate(0);
-    setAscending(false);
-    setDescending(false);
-    setInStockOnly(false);
-    setFastDeliveryOnly(false);
+  const handleClearFilters = () => {
+    setAscending(false)
+    setInStockOnly(false)
+    setDescending(false)
+    setRate(false)
+    setFastDeliveryOnly(false)
   };
 
   return (
@@ -84,12 +71,12 @@ const Filters = () => {
 
           <div className='p-3 mx-4'>
             <h4 className='mb-3 text-lg text-[#F7C566]'>Rating</h4>
-            <Rating rating={rate} onClick={(rate) => setRate(rate)} />
+            <Rating rating={rate} onClick={(rating) => setRate(rating)} />
           </div>
 
           <div className='w-full flex justify-center'>
             <button
-              onClick={clearFilters}
+             onClick={handleClearFilters} 
               className='my-7 bg-[#EBD3F8] text-black rounded-md p-3 justify-center flex w-[250px]'
             >
               Clear Filters

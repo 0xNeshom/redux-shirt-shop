@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import { FaShoppingCart } from 'react-icons/fa';
-import { useCardContext } from '../Context/Context';
+import { useSelector, useDispatch } from 'react-redux'; 
 import { AiFillDelete } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { IoNotifications } from 'react-icons/io5';
-
+import { removeCard } from "../Redux/actions";
 export default function Header() {
-  const {
-    state: { card },
-    dispatch,
-  } = useCardContext();
-
+  const dispatch = useDispatch(); 
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+  
+  const card = useSelector((state) => state.card ); 
 
   const handleClickOutside = (e) => {
     if (e.target.id === 'modal-overlay') {
@@ -86,10 +85,7 @@ export default function Header() {
                             fontSize='20px'
                             className='cursor-pointer text-red-500 hover:text-red-700 transition-colors'
                             onClick={() =>
-                              dispatch({
-                                type: 'removeTheCard',
-                                payload: product,
-                              })
+                              dispatch(removeCard(product.id))
                             }
                           />
                         </div>
